@@ -17,7 +17,7 @@ runs:
   steps:
     - run: echo "Before"
       shell: bash
-    - run: echo "$INPUT_MESSAGE"
+    - run: echo "R=:$INPUT_TOKEN:" "${{ inputs.message }}"
       shell: bash
     - run: echo "After"
       shell: bash

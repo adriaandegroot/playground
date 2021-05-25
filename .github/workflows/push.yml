@@ -21,8 +21,8 @@ jobs:
       - name: "notify: ok"
         uses: ./.github/actions/notify-push
         with:
-          TOKEN: "token"
-          ROOM: "roomies"
-          MESSAGE: |
+          token: "token"
+          room: "roomies"
+          message: |
             OK ${{ github.workflow }} in ${{ github.repository }} by ${{ github.actor }} on ${{ github.event.ref }}
             .. ${{ steps.pre_build.outputs.message }}
