@@ -16,6 +16,8 @@ jobs:
       image: docker://kdeneon/plasma:user
       options: --tmpfs /build:rw --user 0:0
     steps:
+      - name: "prepare source"
+        uses: actions/checkout@v2
       - name: "notify: ok"
         uses: ./.github/actions/notify-push
         with:
