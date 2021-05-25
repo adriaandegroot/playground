@@ -1,0 +1,26 @@
+name: ci-push
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  BUILDDIR: /build
+  SRCDIR: ${{ github.workspace }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: docker://kdeneon/plasma:user
+      options: --tmpfs /build:rw --user 0:0
+    steps:
+      - name: "notify: ok"
+        uses: ./.github/actions/notify-push
+        with:
+          TOKEN: "token"
+          ROOM: "roomies"
+          MESSAGE: |
+            OK ${{ github.workflow }} in ${{ github.repository }} by ${{ github.actor }} on ${{ github.event.ref }}
+            .. ${{ steps.pre_build.outputs.message }}

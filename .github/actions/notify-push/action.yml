@@ -1,0 +1,19 @@
+name: 'Notify on Push'
+description: 'Notify Matrix room'
+
+inputs:
+  room:
+    description: 'Matrix Room ID'
+    required: true
+  token:
+    description: 'Matrix Token'
+    required: true
+  message:
+    description: 'Message to send'
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - shell: bash
+      run: echo "$INPUT_MESSAGE"
