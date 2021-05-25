@@ -15,5 +15,9 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - shell: bash
-      run: echo "$INPUT_MESSAGE"
+    - run: echo "Before"
+      shell: bash
+    - run: echo "$INPUT_MESSAGE"
+      shell: bash
+    - run: echo "After"
+      shell: bash
