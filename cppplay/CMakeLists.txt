@@ -1,3 +1,6 @@
+cmake_minimum_required(VERSION 3.13 FATAL_ERROR)
+project(cppplay)
+
 find_package(fmt)
 
 add_executable(cppplay main.cpp)

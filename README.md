@@ -4,6 +4,10 @@
 > things that don't particularly fit anywhere else in my
 > collection of repositories.
 
+To use one of these playground applications, `cd` into the appropriate
+directory and build it there (with CMake) or run it there (for Python
+applications). There is no top-level builder.
+
 - *cppplay* is a tiny example C++ project with CMake,
   used to test CLion's remote-development setup.
 - *namespaced* is a little tool to print out anonymous
