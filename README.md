@@ -10,6 +10,9 @@ applications). There is no top-level builder.
 
 - *cppplay* is a tiny example C++ project with CMake,
   used to test CLion's remote-development setup.
+- *mode* is a consteval (compile-time) interpreter of
+  compact readable file-mode expressions in the style
+  of `ls(1)`, usable in e.g. `chmod(filename, "rwxr-x---"_mode)`.
 - *namespaced* is a little tool to print out anonymous
   and non-anonymous namespaces found in a codebase (assumes
   particular clang-format conventions to spot the namespace names).
